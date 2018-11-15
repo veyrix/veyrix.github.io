@@ -6,6 +6,8 @@
 
 body {
   overflow-y: hidden;
+  @import url('https://fonts.googleapis.com/css?family=Spicy+Rice');
+
 
   section {
     background-image: url('../img/wp2859545.jpg');
@@ -14,6 +16,20 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
+
+    header {
+      position: fixed;
+      right: 0%;
+      margin-right: 3rem;
+      margin-top: 0.5rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 0.7rem;
+      background: rgba(255,255,255, 0.5);
+      box-shadow: 0px 0px 2px #333;
+      font-family: 'Spicy Rice', cursive;
+      color: #333;
+      cursor: auto;
+    }
   
     .container {
       max-width: 1600px;
@@ -23,6 +39,7 @@ body {
       display: grid;
       grid-template-columns: repeat(3, 33%);
       grid-template-rows: 50% 50%;
+      cursor: url('../img/Hammer.cur'), auto;
 
       .img-cont {
         height: 100%;
