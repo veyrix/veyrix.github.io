@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Spicy+Rice");
 * {
   margin: 0;
   padding: 0;
@@ -19,33 +18,65 @@ body section {
   background-position: 50%;
 }
 
-body section header {
-  position: fixed;
-  right: 0%;
-  margin-right: 3rem;
-  margin-top: 0.5rem;
-  padding: 0.3rem 0.7rem;
-  border-radius: 0.7rem;
-  background: rgba(255, 255, 255, 0.5);
-  -webkit-box-shadow: 0px 0px 2px #333;
-          box-shadow: 0px 0px 2px #333;
-  font-family: 'Spicy Rice', cursive;
+body section footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
   color: #333;
-  cursor: auto;
+  font-size: 0.5rem;
+}
+
+body section header {
+  padding: 0.3rem;
+  background: #2471A3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f3f3f3;
+}
+
+body section header button, body section header select {
+  border: 1px solid #f3f3f3;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  background: transparent;
+  color: #f3f3f3;
+  cursor: pointer;
+  font-size: 0.6rem;
+}
+
+body section header option {
+  color: #2471A3;
 }
 
 body section .container {
-  max-width: 1600px;
-  width: 80%;
+  overflow: hidden;
+  width: 300px;
   margin: 0 auto;
-  height: 100vh;
+  height: 300px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (33%)[3];
       grid-template-columns: repeat(3, 33%);
   -ms-grid-rows: 50% 50%;
       grid-template-rows: 50% 50%;
-  cursor: url("../img/Hammer.cur"), auto;
+  cursor: url("../img/Hammer.cur"), default;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 body section .container .img-cont {
@@ -54,14 +85,15 @@ body section .container .img-cont {
 }
 
 body section .container .img-cont .target {
-  width: 30%;
+  width: 60%;
   margin: 0 auto;
   z-index: 1;
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%, 70%);
           transform: translate(-50%, 70%);
-  opacity: 0;
+  opacity: 0.75;
+  display: none;
   -webkit-transition: all 75ms linear;
   transition: all 75ms linear;
 }
@@ -70,10 +102,11 @@ body section .container .img-cont .active {
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   opacity: 1;
+  display: block;
 }
 
 body section .container .img-cont .rock {
-  width: 80%;
+  width: 90%;
   z-index: 100;
   position: absolute;
   bottom: 0;

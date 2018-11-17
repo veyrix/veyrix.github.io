@@ -1,3 +1,5 @@
+$text-white: #f3f3f3;
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +8,6 @@
 
 body {
   overflow-y: hidden;
-  @import url('https://fonts.googleapis.com/css?family=Spicy+Rice');
 
 
   section {
@@ -17,29 +18,53 @@ body {
     background-size: cover;
     background-position: 50%;
 
-    header {
-      position: fixed;
-      right: 0%;
-      margin-right: 3rem;
-      margin-top: 0.5rem;
-      padding: 0.3rem 0.7rem;
-      border-radius: 0.7rem;
-      background: rgba(255,255,255, 0.5);
-      box-shadow: 0px 0px 2px #333;
-      font-family: 'Spicy Rice', cursive;
+    footer {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin-right: 1rem;
+      margin-bottom: 0.5rem;
       color: #333;
-      cursor: auto;
+      font-size: 0.5rem;
+    }
+
+    header {
+      padding: 0.3rem;
+      background: #2471A3;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      color: $text-white;
+
+      button, select {
+        border: 1px solid $text-white;
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.3rem;
+        background: transparent;
+        color: $text-white;
+        cursor: pointer;
+        font-size: 0.6rem;
+      }
+
+      option {
+        color: #2471A3;
+      }
     }
   
     .container {
-      max-width: 1600px;
-      width: 80%;
+      overflow: hidden;
+      width: 300px;
       margin: 0 auto;
-      height: 100vh;
+      height: 300px;
       display: grid;
       grid-template-columns: repeat(3, 33%);
       grid-template-rows: 50% 50%;
-      cursor: url('../img/Hammer.cur'), auto;
+      cursor: url('../img/Hammer.cur'), default;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
       .img-cont {
         height: 100%;
@@ -47,23 +72,27 @@ body {
 
 
         .target {
-          width: 30%;
+          width: 60%;
           margin: 0 auto;
           z-index: 1;
           position: absolute;
           left: 50%;
           transform: translate(-50%, 70%);
-          opacity: 0;
+          opacity: 0.75;
+          // transform: scale(0.01);
+          display: none;
           transition: all 75ms linear;
         }
 
         .active {
           transform: translate(-50%, 0);
           opacity: 1;
+          // transform: scale(1)
+          display: block;
         }
 
         .rock {
-          width: 80%;
+          width: 90%;
           z-index: 100;
           position: absolute;
           bottom: 0;
