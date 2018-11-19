@@ -62,7 +62,6 @@ function startGame() {
   score = 0
   activateTarget()
   setTimeout(() => timeUp = true, duration)
-  console.log(duration)
 }
 
 function playSound() {
