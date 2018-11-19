@@ -71,8 +71,7 @@ function playSound() {
 }
 
 function hitTarget(e) {
-  if(!e.isTrusted) return
-  // if(!e.target.className.includes('active')) return
+  if(!e.isTrusted) return //Stops the func if is not a real click
   score++
   this.classList.remove('active')
 
