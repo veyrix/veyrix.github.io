@@ -47,7 +47,7 @@ function randomTarget(targets) {
 }
 
 function activateTarget() {
-  const time = randomTime(500, 1100)
+  const time = randomTime(600, 1000)
   const target = randomTarget(targets)
   target.classList.add('active')
   setTimeout(() => {
@@ -73,7 +73,7 @@ function playSound() {
 
 function hitTarget(e) {
   if(!e.isTrusted) return
-  if(!e.target.className.includes('active')) return
+  // if(!e.target.className.includes('active')) return
   score++
   this.classList.remove('active')
 
